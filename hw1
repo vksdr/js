@@ -1,0 +1,174 @@
+Задача 1
+
+let arr = [16, true, 'JS', null, {name: 'UserName', hobby: 'JS'}, 30, null, false, 'Vue'] // масив, у якому є числа, строки та об'єкт {}
+
+for (let i = 0; i < arr.length; i++) { //for - запускає цикл, у дужках - його задача: (let i = 0) - каже, що і = лічильнік та скидає його на нуль, тоді просить продовжувати поки і буде меншим за довжину масиву (i < arr.length), і на кожному кроці додавати +1 (i++).
+    if (isNaN(arr[i])) { // тоді додаємо, якщо об'єкт під номером, який має і не є числом (if (isNaN(arr[i]))), 
+        arr[i] = null // тоді зроби його значення в масиві на нуль
+    }
+}
+
+console.log("Перевірку та зміни масиву завершено") // якщо цикл закінчився, то рушій приходить до виконання наступної строки, де сповіщається про закінчення циклу
+console.log(arr) //після ми перевіряємо, який вигляд має масив після роботи циклу
+
+///////////////////////////////////////////////////////////////////////
+
+let arr = [16, true, 'JS', null, {name: 'UserName', hobby: 'JS'}, 30, null, false, 'Vue']
+
+let i = 0 //встановлюємо лічильник на нуль
+
+while (i < arr.length) { //тоді кажемо буквально: поки лічильник менше довжини масиву, додавай один (строка 22)
+    if (isNaN(arr[i])) { //але якщо бачиш, що об'єкт під номером лічильника не є числом, заміни його на нуль.
+        arr[i] = null
+    }
+    i++
+}
+
+console.log("Перевірку та зміни масиву завершено")
+console.log(arr)
+
+/////////////////////////////////////////////////////////////////////
+Задача 2
+
+let arr = [45, '246', 73, '4', 15, 36, 17, 89, '49', 167, 123];
+let count = 0;
+
+for (let i = 0; i < arr.length; i++) {
+  if (typeof arr[i] === 'number' && arr[i] % 3 === 0) {
+    count++;
+  }
+}
+
+if (count > 0) {
+  console.log(`В данном массиве ${count} чисел кратных 3`);
+} else {
+  console.log('В данном массиве нет чисел кратных 3');
+}
+
+let arr = [45, '246', 73, '4', 15, 36, 17, 89, '49', 167, 123];
+let count = 0;
+
+for (let i = 0; i < arr.length; i++) {
+  if (typeof arr[i] === 'number' && arr[i] % 3 === 0) {
+    count++;
+  }
+}
+
+if (count > 0) {
+  console.log(`В данном массиве ${count} чисел кратных 3`);
+} else {
+  console.log('В данном массиве нет чисел кратных 3');
+}
+
+/////////////////////////////////////////////////////////////////////
+let arr = [45, '246', 73, '4', 15, 36, 17, 89, '49', 167, 123];
+let count = 0;
+let i = 0;
+
+while (i < arr.length) {
+  if (typeof arr[i] === 'number' && arr[i] % 3 === 0) {
+    count++;
+  }
+  i++;
+}
+
+if (count > 0) {
+  console.log(`В данном массиве ${count} чисел кратных 3`);
+} else {
+  console.log('В данном массиве нет чисел кратных 3');
+}
+
+
+/////////////////////////////////////////////////////////////////////
+Задача 3 ТУТ НЕ ПОЙНЯВ
+
+function countObjects() {
+  let stringCount = 0;
+  let numberCount = 0;
+  let booleanCount = 0;
+  let nullCount = 0;
+  let objectCount = 0;
+    for (let i = 0; i < arr.lenght; i++) {
+    let element = arr[i];
+    let type = typeof element;
+        
+        if (type === 'string') {
+        stringCount++;
+        } else if (type === 'number') {
+            numberCount++;
+        } else if (type === 'boolean') {
+            booleanCount++;
+        } else if (type === 'null') {
+            nullCount++;
+        } else if (type === 'object') {
+            objectCount++;
+        }
+        
+    console.log(`String: ${stringCount}`);
+    console.log(`Number: ${numberCount}`);
+    console.log(`Boolean: ${booleanCount}`);
+    console.log(`Null: ${nullCount}`);
+    console.log(`Object: ${objectCount}`);
+}
+
+let arr = [16, true, 'JS', null, {name: 'UserName', hobby: 'JS'}, 30, null, false, 'Vue']
+
+countObjects()
+
+function countElements(arr) {
+  let stringCount = 0;
+  let numberCount = 0;
+  let booleanCount = 0;
+  let nullCount = 0;
+  let objectCount = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    let element = arr[i];
+    let type = typeof element;
+
+    if (type === 'string') {
+      stringCount++;
+    } else if (type === 'number') {
+      numberCount++;
+    } else if (type === 'boolean') {
+      booleanCount++;
+    } else if (type === 'object' && element === null) {
+      nullCount++;
+    } else if (type === 'object') {
+      objectCount++;
+    }
+  }
+
+  console.log(`String: ${stringCount}`);
+  console.log(`Number: ${numberCount}`);
+  console.log(`Boolean: ${booleanCount}`);
+  console.log(`Null: ${nullCount}`);
+  console.log(`Object: ${objectCount}`);
+}
+
+let array = [16, true, 'JS', null, {name: 'UserName', hobby: 'JS'}, 30, null, false, 'Vue'];
+countElements(array);
+
+/////////////////////////////////////////////////////////////////////
+
+ЗАДАЧА 4
+
+// Function Declaration
+function greetUserDeclaration(username, greetingMessage) {
+  return `${username}, ${greetingMessage}`;
+}
+
+// Function Expression
+let greetUserExpression = function(username, greetingMessage) {
+  return `${username}, ${greetingMessage}`;
+};
+
+// Приклад використання
+let username = "Іван";
+let greetingMessage = "Ласкаво просимо!";
+
+let resultDeclaration = greetUserDeclaration(username, greetingMessage);
+console.log(resultDeclaration);
+
+let resultExpression = greetUserExpression(username, greetingMessage);
+console.log(resultExpression);
