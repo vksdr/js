@@ -1,0 +1,109 @@
+// Задача1
+
+function createCounter() {
+  let count = 0;
+
+  return function() {
+    count++;
+    return count;
+  };
+}
+
+
+let counter = createCounter(); // Створюємо лічильник
+
+console.log(counter());
+console.log(counter());
+console.log(counter());
+
+// Задача 2
+
+function createRandomNumber() {
+  let resultArray = [];
+
+  return function() {
+    let randomNumber = Math.floor(Math.random() * 50) + 1;
+
+    if (resultArray.includes(randomNumber)) {
+      return "Это число уже есть в массиве!";
+    } else {
+      resultArray.push(randomNumber);
+      return resultArray;
+    }
+  };
+}
+
+
+let getRandomNumber = createRandomNumber(); // запускаємо функцію
+
+console.log(getRandomNumber()); 
+console.log(getRandomNumber()); 
+console.log(getRandomNumber()); 
+console.log(getRandomNumber()); 
+console.log(getRandomNumber());
+
+// Задача 3
+
+let checkPassword = (function(password) {
+  return function(input) {
+    return input === password;
+  };
+})("tellMeWhy");
+
+console.log(checkPassword("tellMeWhy"));
+console.log(checkPassword("randomWord"));
+
+// Задача 4
+
+let adder = (function(n) {
+  return function(num) {
+    return n + num;
+  };
+})(1);
+
+console.log(adder(3));
+console.log(adder(10));
+
+// Задача 5
+
+// Моя спрооба
+
+let countdown = (function() {
+  let counter = 10;
+  return (function() {
+    counter--;
+    if (counter > 0)
+      return counter;
+    else if (counter === 0)
+      return "Отсчёт окончен"
+  })
+}) ()
+
+console.log(countdown)
+
+// бездуховна машина і її елегантне рішення
+
+let countdown = (function() {
+  let counter = 10;
+
+  return function() {
+    if (counter > 0) {
+      console.log(counter);
+      counter--;
+    } else {
+      console.log("Отсчет окончен");
+    }
+  }
+  countdown();
+})()
+
+function callCountdown() {
+  for (let i = 0; i < 11; i++) {
+    countdown();
+  }
+}
+
+callCountdown()
+
+// задача 6 
+
