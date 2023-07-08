@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form-wrap">
+
+        <div class="form active" id="form1">
+          <div class="tab">Продукт</div>
+          <form>
+            <div class="product">
+              <p class="label__product">Air Pods Pro</p>
+              <img class="pic__product" id="pack__pic" src="./img/2140810.jpeg">
+            </div>
+            <div class="field">
+            <p>Ціна: <span class="price">150</span></p>
+            <div class="prods">
+                <button type="button" id="minus__btn">-</button>
+                <input type="number" id="number__input" min="1" value="1">
+                <button type="button" id="plus__btn">+</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      
+        <div class="form" id="form2">
+          <div class="tab">Контакти</div>
+          <form>
+            <div class="field">
+              <p class="label__product">Форма замовлення</p>
+              <label for="name">Ім'я</label>
+              <input type="text" id="name">
+              <label for="post">Пошта</label>
+              <input type="text" id="post">
+              <label for="tel">Телефон</label>
+              <input type="text" id="tel">
+              <label for="adr">Адреса</label>
+              <input type="text" id="adr">
+            </div>
+          </form>
+        </div>
+
+        <div class="form" id="form3">
+            <div class="tab">Інформація</div>
+            <form>
+              <div class="field">
+                <div class="tab">Інформація</div>
+              <h2>Ім'я</h2>
+              <p id="name1"></p>
+              <h2>Пошта</h2>
+              <p id="post1"></p>
+              <h2>Телефон</h2>
+              <p id="tel1"></p>
+              <h2>Адреса</h2>
+              <p id="adr1"></p>
+              <h2>Ціна</h2>
+              <p id="price1"></p>
+              </div>
+            </form>
+          </div>
+        
+        
+      
+      </div>
+      <script src="./script.js"></script>
+</body>
+</html>
